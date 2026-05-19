@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Beruang Memasak</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Beruang Memasak dan Menjual</h1>
+      <p>Masak hidangan lezat, jual ke pembeli hewan, dan kumpulkan koin!</p>
+    </header>
+
+    <main>
+      <div class="game-area">
+        <canvas id="gameCanvas" width="900" height="560"></canvas>
+        <aside class="sidebar">
+          <div class="panel">
+            <h2>Status</h2>
+            <div class="status-item"><strong>Bahan:</strong> <span id="ingredientCount">0</span></div>
+            <div class="status-item"><strong>Masak:</strong> <span id="cookStage">Belum</span></div>
+            <div class="status-item"><strong>Pelanggan:</strong> <span id="customerName">-</span></div>
+            <div class="status-item"><strong>Koin:</strong> <span id="coins">0</span></div>
+          </div>
+
+          <div class="panel controls">
+            <h2>Aksi</h2>
+            <button id="addIngredient">Tambah Bahan</button>
+            <button id="cookDish">Masak</button>
+            <button id="sellDish">Jual</button>
+            <p class="hint">Klik tombol untuk memajukan permainan. Pelanggan akan datang otomatis.</p>
+          </div>
+
+          <div class="panel log-panel">
+            <h2>Menu</h2>
+            <div id="gameLog" class="game-log">Beruang siap memasak!</div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
